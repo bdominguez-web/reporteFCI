@@ -494,18 +494,18 @@ ARS,2025-03-05,Cuenta A,Balanz Ahorro,1500000.00,BALANZ`;
                                         <tbody className="divide-y divide-slate-200 bg-white">
                                             {groupedVariations.map((family) => (
                                                 <React.Fragment key={family.name}>
-                                                    <tr className="bg-white group hover:bg-slate-50 cursor-pointer transition-colors border-b border-slate-200" onClick={() => toggleFamily(family.name)}>
-                                                        <td className="px-4 sm:px-6 py-3 flex items-center gap-2 font-bold text-gray-900">
+                                                    <tr className="bg-brand-navy group hover:bg-slate-800 cursor-pointer transition-colors border-b border-slate-200" onClick={() => toggleFamily(family.name)}>
+                                                        <td className="px-4 sm:px-6 py-3 flex items-center gap-2 font-bold text-white">
                                                             {expandedFamilies.includes(family.name) ? <Icons.ChevronDown size={14} className="text-brand-gold"/> : <Icons.ChevronRight size={14} className="text-brand-gold"/>}
                                                             {family.name}
                                                         </td>
-                                                        <td className="px-4 sm:px-6 py-3 text-right font-bold text-gray-900">{formatCurrency(family.current)}</td>
-                                                        <td className={`px-2 py-3 text-right border-l border-slate-100 ${family.diff7d >= 0 ? 'text-emerald-600' : 'text-red-600'}`}>{formatCurrency(family.diff7d)}</td>
-                                                        <td className={`px-2 py-3 text-right ${family.pct7d >= 0 ? 'text-emerald-600' : 'text-red-600'}`}>{formatPct(family.pct7d)}</td>
-                                                        <td className={`px-2 py-3 text-right border-l border-slate-100 ${family.diff28d >= 0 ? 'text-emerald-600' : 'text-red-600'}`}>{formatCurrency(family.diff28d)}</td>
-                                                        <td className={`px-2 py-3 text-right ${family.pct28d >= 0 ? 'text-emerald-600' : 'text-red-600'}`}>{formatPct(family.pct28d)}</td>
-                                                        <td className={`px-2 py-3 text-right border-l border-slate-100 ${family.diffYTD >= 0 ? 'text-emerald-600' : 'text-red-600'}`}>{formatCurrency(family.diffYTD)}</td>
-                                                        <td className={`px-2 py-3 text-right ${family.pctYTD >= 0 ? 'text-emerald-600' : 'text-red-600'}`}>{formatPct(family.pctYTD)}</td>
+                                                        <td className="px-4 sm:px-6 py-3 text-right font-bold text-white">{formatCurrency(family.current)}</td>
+                                                        <td className={`px-2 py-3 text-right border-l border-slate-700 ${family.diff7d >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>{formatCurrency(family.diff7d)}</td>
+                                                        <td className={`px-2 py-3 text-right ${family.pct7d >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>{formatPct(family.pct7d)}</td>
+                                                        <td className={`px-2 py-3 text-right border-l border-slate-700 ${family.diff28d >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>{formatCurrency(family.diff28d)}</td>
+                                                        <td className={`px-2 py-3 text-right ${family.pct28d >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>{formatPct(family.pct28d)}</td>
+                                                        <td className={`px-2 py-3 text-right border-l border-slate-700 ${family.diffYTD >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>{formatCurrency(family.diffYTD)}</td>
+                                                        <td className={`px-2 py-3 text-right ${family.pctYTD >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>{formatPct(family.pctYTD)}</td>
                                                     </tr>
                                                     {expandedFamilies.includes(family.name) && family.funds.map(fund => (
                                                         <tr key={fund.name} className="bg-slate-50/50 hover:bg-slate-100 border-b border-slate-100 text-xs">
